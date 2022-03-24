@@ -872,7 +872,7 @@ public class RNSendIntentModule extends ReactContextBaseJavaModule {
       public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
           if (requestCode == FILE_SELECT_CODE && data!=null) {
               Uri uri = data.getData();
-              mCallback.invoke(uri.getPath());
+              mCallback.invoke(uri.toString());
           }
       }
     };
