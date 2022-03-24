@@ -32,5 +32,8 @@
   "bugs": "https://github.com/lucasferreira/react-native-send-intent/issues",
   "peerDependencies": {
     "react-native": "*"
+  },
+  "publishConfig": {
+      "@cs-global:registry": "https://gitlab.com/api/v4/projects/24885196/packages/npm/"
   }
 }
