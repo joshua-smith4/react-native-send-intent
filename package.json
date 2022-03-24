@@ -1,8 +1,11 @@
 {
-  "name": "react-native-send-intent",
+  "name": "@cs-global/react-native-send-intent",
   "version": "1.3.0",
   "description": "React Native Android module to use Android's Intent actions for send sms, text to shareable apps, open custom apps, make phone calls and etc",
   "main": "index.js",
+  "publishConfig": {
+      "@cs-global:registry": "https://gitlab.com/api/v4/projects/24885196/packages/npm/"
+  },
   "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,8 +35,5 @@
   "bugs": "https://github.com/lucasferreira/react-native-send-intent/issues",
   "peerDependencies": {
     "react-native": "*"
-  },
-  "publishConfig": {
-      "@cs-global:registry": "https://gitlab.com/api/v4/projects/24885196/packages/npm/"
   }
 }
