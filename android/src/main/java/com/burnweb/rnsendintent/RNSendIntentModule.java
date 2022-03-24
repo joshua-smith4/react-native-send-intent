@@ -777,6 +777,20 @@ public class RNSendIntentModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void openFileCreate(ReadableMap options,Callback callback) {
+      mCallback = callback;
+      Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+      intent.setType(options.getString("type"));
+      intent.addCategory(Intent.CATEGORY_OPENABLE);
+      try {
+          Activity currentActivity = getCurrentActivity();
+          currentActivity.startActivityForResult(Intent.createChooser(intent, options.getString("title")),FILE_SELECT_CODE);
+      } catch (android.content.ActivityNotFoundException ex) {
+
+      }
+    }
+
+    @ReactMethod
     public void openFilePicker(ReadableMap options,Callback callback) {
       mCallback = callback;
       Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
